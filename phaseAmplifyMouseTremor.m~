@@ -6,12 +6,12 @@
 vidFile = '/Users/mattgaidica/Dropbox/Projects/Dauer Lab/Mouse Tremor/IMG_2582-clip-tiny.mov';
 vidName = 'tremor';
 outDir = '/Users/mattgaidica/Dropbox/Projects/Dauer Lab/Mouse Tremor';
-sigma = 6; % Blurring
-alpha = 200; % Magnification
+sigma = 3; % Blurring
+alpha = 1000; % Magnification
 FS = 240; % Sampling rate
 fl = 3; % Freq bands
 fh = 15; % Freq bands
-refFrame  = 20;
+refFrame  = 10;
 
 vr   = VideoReader(vidFile);
 

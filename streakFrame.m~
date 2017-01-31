@@ -1,0 +1,21 @@
+analyzeVideo = '/Users/mattgaidica/Dropbox/Projects/Dauer Lab/Mouse Tremor/IMG_2582-clip-tiny.mov';
+v = VideoReader(analyzeVideo);
+
+frameMatrix = [];
+frameCount = 0;
+height = 50; % pixels
+while hasFrame(v)
+    frameCount = frameCount + 1;
+    frame = readFrame(v);
+    if isempty(frameMatrix)
+        h = figure;
+        imshow(frame);
+        [x,y] = ginput(1);
+        x = round(x);
+        y = round(y);
+        close(h);
+    end
+    frameMatrix(frameCount,:,:) = frame(x,y-height:y+height,:); % ignore width
+    disp(num2str(frameCount));
+end
+figure;imshow(frameMatrix);
