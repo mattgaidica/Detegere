@@ -15,7 +15,7 @@
 %   - What temporal filter to use
 % 
 
-function outName = phaseAmplify(vidFile, magPhase , fl, fh,fs, outDir, varargin)
+function outName = phaseAmplify(vidFile, magPhase , fl, fh, fs, outDir, varargin)
 
     %% Read Video
     vr = VideoReader(vidFile);
